@@ -5,13 +5,16 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Snehdeep</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Snehdeep Kaur | Software Developer</title>
+  <meta content="Software Developer with expertise in Java, Python, and Web Development" name="description">
+  <meta content="software developer, web development, java, python" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="icon" href="assets/img/favicons/favicon.ico" sizes="48x48">
+  <link rel="icon" href="assets/img/favicons/favicon.svg" sizes="any" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="assets/img/favicons/site.webmanifest">
+  <meta name="theme-color" content="#149ddd">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -23,6 +26,9 @@
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Devicon CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -36,6 +42,10 @@
 </head>
 
 <body>
+  <!-- Theme Toggle Button -->
+  <div class="theme-toggle">
+    <i class="bx bx-moon"></i>
+  </div>
 
   <!-- ======= Mobile nav toggle button ======= -->
   <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
@@ -45,30 +55,24 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/profile-img.png" alt="" class="img-fluid rounded-circle">
+        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Snehdeep Kaur</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <!-- Remove duplicated social links -->
         </div>
       </div>
 
       <nav class="nav-menu">
         <ul>
-          <li class="active"><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#Participations"><i class="bx bx-book-content"></i> Participations</a></li>
-       <!--    <li><a href="#services"><i class="bx bx-server"></i> Services</a></li>
-          <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li> -->
-
+          <li class="active"><a href="#hero" class="scrollto"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#resume" class="scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="#skills" class="scrollto"><i class="bx bx-code-curly"></i> <span>Skills</span></a></li>
+          <li><a href="#projects" class="scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
+          <li><a href="#interests" class="scrollto"><i class="bx bx-heart"></i> <span>Interests</span></a></li>
+          <li><a href="#contact" class="scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
-      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
-
     </div>
   </header><!-- End Header -->
 
@@ -76,8 +80,13 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>Snehdeep Kaur</h1>
-  <!--     <p>I'm <span class="typed" data-typed-items="Designer, Developer, Content Writer, Soon to be Engineer"></span></p> -->
-      <p>I love to <span class="typed" data-typed-items="Lead, Interact, Explore, Learn"></span></p>
+      <p class="hero-tagline mb-3">Building innovative software solutions for tomorrow's challenges</p>
+      <p class="typed-container">I'm a <span class="typed" data-typed-items="Software Developer, Problem Solver, Tech Enthusiast"></span></p>
+      <div class="hero-buttons mt-4">
+        <a href="SnehdeepKaurResumee.pdf" class="btn-download" download>Download CV <i class="bx bx-download"></i></a>
+        <a href="#projects" class="btn-projects scrollto">View Projects <i class="bx bx-code-block"></i></a>
+        <a href="#contact" class="btn-contact scrollto">Contact Me <i class="bx bx-envelope"></i></a>
+      </div>
     </div>
   </section><!-- End Hero -->
 
@@ -88,38 +97,147 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>About</h2>
-          <p>Attentive,hard working,compassionate computer engineering student .Web designer skilled in Web
-Content Writing looking for an opportunity to gain experience and advance their career.</p>
+          <h2>Backend Engineer & Data Specialist</h2>
+          <p>Building scalable backend systems and data pipelines that power enterprise applications.<br>
+          Specialized in Java microservices, cloud infrastructure, and real-time data processing.</p>
+          <div class="location-badge">
+            <i class="bx bx-map-pin"></i> Dublin, Ireland <span class="availability-dot"></span> Open to opportunities
+          </div>
         </div>
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/1.png" class="img-fluid" alt="" style="height: 200px ;margin-left: 100px">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <!-- <h3>UI/UX Designer &amp; Web Developer.</h3> -->
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> 9 JUNE 2000</li>
-                 
-                  <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +916239325979</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>City:</strong> City : Amritsar, Punjab</li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> 20</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> skaur7_be18@thapar.edu</li>
-                   <li><i class="icofont-rounded-right"></i> <strong>Website:</strong> www.example.com</li>
-                </ul>
+            <div class="profile-img-wrapper">
+              <img src="assets/img/profile-img.png" class="profile-img" alt="Snehdeep Kaur">
+              <div class="tech-stack-float">
+                <i class="devicon-java-plain" title="Java"></i>
+                <i class="devicon-python-plain" title="Python"></i>
+                <i class="devicon-spring-plain" title="Spring Boot"></i>
+                <i class="devicon-amazonwebservices-original" title="AWS"></i>
               </div>
             </div>
-            <p>
-              I am currently pursuing Computer Engineering at Thapar University.And I have worked on different fields viz AppDev, WebDev and Cyber Security.
-              Now,I am understanding Arificial Intelligence and Machine Learning concepts.
-            </p>
+            <div class="mt-4 text-center">
+              <a href="SnehdeepKaurResumee.pdf" class="btn-modern primary" download><i class="bx bx-download"></i> Download Resume</a>
+              <a href="https://github.com/snehdeep2000" target="_blank" class="btn-modern secondary"><i class="bx bxl-github"></i> GitHub</a>
+            </div>
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Software Developer at Airtel International LLP Africa</h3>
+            <div class="role-badge">Backend Development • Microservices • Data Engineering</div>
+            
+            <div class="contact-info-modern">
+              <div class="info-item">
+                <i class="bx bx-map"></i>
+                <div>
+                  <strong>Location</strong>
+                  <span>Dublin, Ireland (GMT)</span>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="bx bx-envelope"></i>
+                <div>
+                  <strong>Email</strong>
+                  <span>snehdeep459@gmail.com</span>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="bx bx-briefcase"></i>
+                <div>
+                  <strong>Experience</strong>
+                  <span>3+ Years</span>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="bx bx-check-circle"></i>
+                <div>
+                  <strong>Work Status</strong>
+                  <span>Available for opportunities</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="professional-summary">
+              <h4>Core Expertise</h4>
+              <p>
+                Backend engineer with 3+ years building enterprise-scale systems. Specialized in designing microservices architectures, 
+                implementing real-time data pipelines, and optimizing cloud infrastructure for high-traffic applications. 
+                Passionate about clean code, system design, and solving complex technical challenges.
+              </p>
+              
+              <div class="tech-stack-section">
+                <h5>Primary Tech Stack</h5>
+                <div class="tech-pills">
+                  <span class="tech-pill primary">Java</span>
+                  <span class="tech-pill primary">Spring Boot</span>
+                  <span class="tech-pill primary">Python</span>
+                  <span class="tech-pill">AWS</span>
+                  <span class="tech-pill">GCP</span>
+                  <span class="tech-pill">Docker</span>
+                  <span class="tech-pill">Kafka</span>
+                  <span class="tech-pill">PostgreSQL</span>
+                  <span class="tech-pill">MongoDB</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="achievements-section">
+              <h4>Impact & Achievements</h4>
+              <div class="achievement-cards">
+                <div class="achievement-card-modern">
+                  <div class="achievement-icon">
+                    <i class="bx bx-rocket"></i>
+                  </div>
+                  <div class="achievement-content">
+                    <div class="metric">
+                      <span class="metric-value" data-target="60">0</span>
+                      <span class="metric-unit">%</span>
+                    </div>
+                    <h5>Faster Deployments</h5>
+                    <p>Led microservices migration reducing deployment time from hours to minutes</p>
+                    <div class="tech-used">
+                      <span>Spring Boot</span>
+                      <span>Docker</span>
+                      <span>Kubernetes</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="achievement-card-modern">
+                  <div class="achievement-icon">
+                    <i class="bx bx-data"></i>
+                  </div>
+                  <div class="achievement-content">
+                    <div class="metric">
+                      <span class="metric-value" data-target="10">0</span>
+                      <span class="metric-unit">M+</span>
+                    </div>
+                    <h5>Daily Transactions</h5>
+                    <p>Built real-time data pipeline processing millions of telecom transactions</p>
+                    <div class="tech-used">
+                      <span>Kafka</span>
+                      <span>PySpark</span>
+                      <span>AWS</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="additional-info">
+              <div class="info-card">
+                <h4><i class="bx bx-graduation"></i> Future Plans</h4>
+                <p>Preparing for <strong>MSc Computer Science</strong> at Technological University Dublin (2025-2026)</p>
+                <p class="focus-area">Focus: AI/ML in Production & Distributed Systems</p>
+              </div>
+              
+              <div class="info-card">
+                <h4><i class="bx bx-check-shield"></i> Work Authorization</h4>
+                <p>English Proficiency: <strong>140/160</strong> (Duolingo English Test)</p>
+                <a href="https://certs.duolingo.com/3pby6o171n375twj" target="_blank" class="verify-link">
+                  <i class="bx bx-link-external"></i> Verify Certificate
+                </a>
+                <p class="mt-2 text-muted">Ready to work in Ireland.</p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -133,162 +251,412 @@ Content Writing looking for an opportunity to gain experience and advance their 
 
         <div class="section-title">
           <h2>Skills</h2>
-          
+          <p>A showcase of the languages, frameworks, and technologies I've worked with. I'm always eager to learn and expand my skillset.</p>
         </div>
 
-        <div class="row skills-content">
+        <h3 class="skills-category-title">Languages & Databases</h3>
+        <div class="skills-grid">
+          <div class="skill-card" data-aos="fade-up"><i class='devicon-java-plain'></i><span>Java</span></div>
+          <div class="skill-card" data-aos="fade-up"><i class='devicon-python-plain'></i><span>Python</span></div>
+          <div class="skill-card" data-aos="fade-up"><i class='devicon-javascript-plain'></i><span>JavaScript</span></div>
+          <div class="skill-card" data-aos="fade-up"><i class='devicon-mysql-plain'></i><span>MySQL</span></div>
+          <div class="skill-card" data-aos="fade-up"><i class='devicon-postgresql-plain'></i><span>PostgreSQL</span></div>
+          <div class="skill-card" data-aos="fade-up"><i class='devicon-mongodb-plain'></i><span>MongoDB</span></div>
+        </div>
 
-          <div class="col-lg-6" data-aos="fade-up">
+        <h3 class="skills-category-title">Frameworks & Libraries</h3>
+        <div class="skills-grid">
+          <div class="skill-card" data-aos="fade-up"><i class='devicon-spring-plain'></i><span>Spring Boot</span></div>
+          <div class="skill-card" data-aos="fade-up"><i class='devicon-react-original'></i><span>React</span></div>
+          <div class="skill-card" data-aos="fade-up"><i class='devicon-nodejs-plain'></i><span>Node.js</span></div>
+          <div class="skill-card" data-aos="fade-up"><i class='devicon-django-plain'></i><span>Django</span></div>
+          <div class="skill-card" data-aos="fade-up"><i class='bx bx-code-block'></i><span>PySpark</span></div>
+          <div class="skill-card" data-aos="fade-up"><i class='bx bx-data'></i><span>Hadoop</span></div>
+        </div>
 
-            <div class="progress">
-              <span class="skill">C/C++ <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">HTML <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">CSS and Bootsrap<i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="progress">
-              <span class="skill">Django <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-
-            <div class="progress">
-              <span class="skill">Photoshop <i class="val">65%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill">Python <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
+        <h3 class="skills-category-title">Cloud, DevOps & Tools</h3>
+        <div class="skills-grid">
+          <div class="skill-card" data-aos="fade-up"><i class='devicon-amazonwebservices-original'></i><span>AWS</span></div>
+          <div class="skill-card" data-aos="fade-up"><i class='devicon-googlecloud-plain'></i><span>GCP</span></div>
+          <div class="skill-card" data-aos="fade-up"><i class='devicon-docker-plain'></i><span>Docker</span></div>
+          <div class="skill-card" data-aos="fade-up"><i class='devicon-git-plain'></i><span>Git</span></div>
+        </div>
+        
+        <h3 class="skills-category-title">Testing</h3>
+        <div class="skills-grid">
+          <div class="skill-card" data-aos="fade-up"><i class='bx bx-data'></i><span>JPA</span></div>
+          <div class="skill-card" data-aos="fade-up"><i class='bx bx-test-tube'></i><span>JUnit</span></div>
         </div>
 
       </div>
     </section><!-- End Skills Section -->
-   <section id="resume" class="resume">
-      <div class="container">
-<embed src="resume.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" type="application/pdf" width="100%" height="1700px"  /></div></section>
-<!-- <iframe src="resume.pdf" width="100%" height="1150px" border="0"></iframe> -->
-    <!-- ======= Participations Section ======= -->
-    <section id="Participations" class="Participations section-bg">
+   
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
       <div class="container">
 
         <div class="section-title">
-          <h2>Participations</h2>
-         
+          <h2>Resume</h2>
+          <p>A detail-oriented and driven software developer with a passion for creating innovative solutions. Experienced in full-stack development and eager to contribute to challenging projects in a dynamic team environment.</p>
         </div>
 
-        
-        <div class="row Participations-container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 Participations-item filter-app">
-            <div class="Participations-wrap">
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="gidha.jpeg" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                   </div>
-                </div>
-              </div>
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Master of Science - Computer Science</h4>
+              <h5>2025 - 2026 (Expected)</h5>
+              <p><em>Technological University Dublin, Ireland</em></p>
+              <p>Focusing on advanced topics in artificial intelligence and machine learning, preparing for a career at the forefront of the "AI Island" initiative.</p>
             </div>
-      
-
-          <div class="col-lg-4 col-md-6 Participations-item filter-app">
-            <div class="Participations-wrap">
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="ccs.jpeg" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                   </div>
-                </div>
-              </div>
-            </div>
-          
-
-         <div class="col-lg-4 col-md-6 Participations-item filter-app">
-            <div class="Participations-wrap">
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="2.png" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                   </div>
-                </div>
-              </div>
+            <div class="resume-item">
+              <h4>Bachelor of Engineering - Computer Engineering</h4>
+              <h5>2018 - 2022</h5>
+              <p><em>Thapar Institute of Engineering and Technology, Patiala, India</em></p>
+              <p>Gained a strong foundation in computer science fundamentals, including data structures, algorithms, and software engineering principles.</p>
             </div>
           </div>
-        
-
-              <div class="row Participations-container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 Participations-item filter-app">
-            <div class="Participations-wrap">
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="2.png" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                   </div>
-                </div>
-              </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Software Developer</h4>
+              <h5>Apr 2024 - Aug 2025</h5>
+              <p><em>Airtel International LLP Africa</em></p>
+              <ul>
+                <li>Developed and maintained microservices for telecom applications using Java, Spring Boot, and AWS to deliver scalable solutions.</li>
+                <li>Collaborated in an Agile environment to design, develop, and deploy new features.</li>
+              </ul>
             </div>
-      
-
-          <div class="col-lg-4 col-md-6 Participations-item filter-app">
-            <div class="Participations-wrap">
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="2.png" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                   </div>
-                </div>
-              </div>
+            <div class="resume-item">
+              <h4>Software Engineer</h4>
+              <h5>Jul 2023 - Mar 2024</h5>
+              <p><em>Vitraya Technologies</em></p>
+              <ul>
+                <li>Contributed to a healthcare platform using Python, Django, and React, focusing on patient data management and secure transactions.</li>
+                <li>Implemented RESTful APIs and worked with PostgreSQL databases.</li>
+              </ul>
             </div>
-          
-
-         <div class="col-lg-4 col-md-6 Participations-item filter-app">
-            <div class="Participations-wrap">
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="2.png" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                   </div>
-                </div>
-              </div>
+            <div class="resume-item">
+              <h4>Associate Software Engineer</h4>
+              <h5>Jan 2022 - Jul 2023</h5>
+              <p><em>OLX Group</em></p>
+              <ul>
+                <li>Assisted in developing and testing new features for the OLX marketplace.</li>
+                <li>Gained hands-on experience with large-scale application architecture and agile methodologies.</li>
+              </ul>
             </div>
           </div>
+        </div>
 
       </div>
-    </section><!-- End Participations Section -->
+    </section><!-- End Resume Section -->
 
-    
+    <!-- ======= Projects Section ======= -->
+    <section id="projects" class="projects portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>A selection of projects that demonstrate my skills and passion for software development. Each project represents a unique challenge and an opportunity to learn and grow.</p>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="projects-flters" class="filter-menu">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-backend">Backend</li>
+              <li data-filter=".filter-frontend">Frontend</li>
+              <li data-filter=".filter-fullstack">Full-Stack</li>
+              <li data-filter=".filter-ml">Machine Learning</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row projects-container">
+          <div class="col-lg-4 col-md-6 projects-item filter-backend" data-aos="fade-up">
+            <div class="project-card">
+              <div class="project-img">
+                <img src="assets/img/portfolio/projects/telecom-api.jpg" class="img-fluid" alt="Telecom API Service">
+                <div class="project-links">
+                  <a href="assets/img/portfolio/projects/telecom-api.jpg" data-gall="portfolioGallery" class="venobox" title="View Larger"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/snehdeep2000/telecom-api" title="GitHub Repo"><i class="bx bxl-github"></i></a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h4>Telecom API Service</h4>
+                <div class="tech-badges">
+                  <span class="badge">Java</span>
+                  <span class="badge">Spring Boot</span>
+                  <span class="badge">AWS</span>
+                </div>
+                <p>A microservice architecture for handling telecom service subscriptions with robust API security and rate limiting.</p>
+                <div class="project-buttons">
+                  <a href="https://github.com/snehdeep2000/telecom-api" class="btn-github"><i class="bx bxl-github"></i> GitHub</a>
+                  <a href="#" class="btn-live">Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 projects-item filter-ml" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card">
+              <div class="project-img">
+                <img src="assets/img/portfolio/projects/healthcare-ml.jpg" class="img-fluid" alt="Healthcare Data Analysis">
+                <div class="project-links">
+                  <a href="assets/img/portfolio/projects/healthcare-ml.jpg" data-gall="portfolioGallery" class="venobox" title="View Larger"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/snehdeep2000/healthcare-ml" title="GitHub Repo"><i class="bx bxl-github"></i></a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h4>Healthcare Data Analysis</h4>
+                <div class="tech-badges">
+                  <span class="badge">Python</span>
+                  <span class="badge">PySpark</span>
+                  <span class="badge">ML</span>
+                </div>
+                <p>Machine learning algorithms applied to healthcare data to predict patient outcomes and optimize care pathways.</p>
+                <div class="project-buttons">
+                  <a href="https://github.com/snehdeep2000/healthcare-ml" class="btn-github"><i class="bx bxl-github"></i> GitHub</a>
+                  <a href="#" class="btn-live">Research Paper</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 projects-item filter-fullstack" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card">
+              <div class="project-img">
+                <img src="assets/img/portfolio/projects/ecommerce.jpg" class="img-fluid" alt="E-Commerce Platform">
+                <div class="project-links">
+                  <a href="assets/img/portfolio/projects/ecommerce.jpg" data-gall="portfolioGallery" class="venobox" title="View Larger"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/snehdeep2000/ecommerce-platform" title="GitHub Repo"><i class="bx bxl-github"></i></a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h4>E-Commerce Platform</h4>
+                <div class="tech-badges">
+                  <span class="badge">React</span>
+                  <span class="badge">Node.js</span>
+                  <span class="badge">MongoDB</span>
+                </div>
+                <p>A full-featured e-commerce solution with customer portal, admin dashboard, and integrated payment processing.</p>
+                <div class="project-buttons">
+                  <a href="https://github.com/snehdeep2000/ecommerce-platform" class="btn-github"><i class="bx bxl-github"></i> GitHub</a>
+                  <a href="#" class="btn-live">Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 projects-item filter-frontend" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-card">
+              <div class="project-img">
+                <img src="assets/img/portfolio/projects/weather.jpg" class="img-fluid" alt="Weather Dashboard">
+                <div class="project-links">
+                  <a href="assets/img/portfolio/projects/weather.jpg" data-gall="portfolioGallery" class="venobox" title="View Larger"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/snehdeep2000/weather-app" title="GitHub Repo"><i class="bx bxl-github"></i></a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h4>Weather Dashboard</h4>
+                <div class="tech-badges">
+                  <span class="badge">JavaScript</span>
+                  <span class="badge">CSS</span>
+                  <span class="badge">APIs</span>
+                </div>
+                <p>Interactive weather application with real-time data visualization, location-based forecasts, and customizable alerts.</p>
+                <div class="project-buttons">
+                  <a href="https://github.com/snehdeep2000/weather-app" class="btn-github"><i class="bx bxl-github"></i> GitHub</a>
+                  <a href="#" class="btn-live">Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 projects-item filter-backend" data-aos="fade-up" data-aos-delay="400">
+            <div class="project-card">
+              <div class="project-img">
+                <img src="assets/img/portfolio/projects/auth.jpg" class="img-fluid" alt="Authentication System">
+                <div class="project-links">
+                  <a href="assets/img/portfolio/projects/auth.jpg" data-gall="portfolioGallery" class="venobox" title="View Larger"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/snehdeep2000/auth-service" title="GitHub Repo"><i class="bx bxl-github"></i></a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h4>Authentication System</h4>
+                <div class="tech-badges">
+                  <span class="badge">Java</span>
+                  <span class="badge">Spring Security</span>
+                  <span class="badge">OAuth</span>
+                </div>
+                <p>Secure authentication service with multi-factor authentication, role-based access control, and SSO capabilities.</p>
+                <div class="project-buttons">
+                  <a href="https://github.com/snehdeep2000/auth-service" class="btn-github"><i class="bx bxl-github"></i> GitHub</a>
+                  <a href="#" class="btn-live">Documentation</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 projects-item filter-ml" data-aos="fade-up" data-aos-delay="500">
+            <div class="project-card">
+              <div class="project-img">
+                <img src="assets/img/portfolio/projects/sentiment.jpg" class="img-fluid" alt="Sentiment Analysis Tool">
+                <div class="project-links">
+                  <a href="assets/img/portfolio/projects/sentiment.jpg" data-gall="portfolioGallery" class="venobox" title="View Larger"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/snehdeep2000/sentiment-analysis" title="GitHub Repo"><i class="bx bxl-github"></i></a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h4>Sentiment Analysis Tool</h4>
+                <div class="tech-badges">
+                  <span class="badge">Python</span>
+                  <span class="badge">NLTK</span>
+                  <span class="badge">TensorFlow</span>
+                </div>
+                <p>NLP-based sentiment analysis engine for social media monitoring with real-time insights and trend visualization.</p>
+                <div class="project-buttons">
+                  <a href="https://github.com/snehdeep2000/sentiment-analysis" class="btn-github"><i class="bx bxl-github"></i> GitHub</a>
+                  <a href="#" class="btn-live">Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Projects Section -->
+
+    <!-- ======= Personal Interests Section ======= -->
+    <section id="interests" class="interests">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Personal Interests</h2>
+          <p>Beyond coding and technology, I'm passionate about several activities that help me maintain balance and broaden my perspective.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6" data-aos="fade-up">
+            <div class="interest-box">
+              <div class="interest-icon"><i class="bx bx-music"></i></div>
+              <h3>Dance</h3>
+              <p>Participated in the college cultural festival "virsa" where I secured 2nd position performing traditional Gidha dance.</p>
+              
+              <div class="interest-achievement">
+                <img src="assets/img/interests/gidha.jpeg" alt="Performing Gidha at virsa Festival" class="img-fluid">
+                <div class="achievement-details">
+                  <h4>College Cultural Festival "virsa"</h4>
+                  <p>Secured 2nd position performing traditional Gidha dance</p>
+                </div>
+              </div>
+              
+              <div class="interest-badge">Performer</div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="interest-box">
+              <div class="interest-icon"><i class="bx bx-world"></i></div>
+              <h3>Travel</h3>
+              <p>Passionate about exploring different cultures and countries. Travel broadens my worldview and gives me fresh perspectives that I bring back to my professional work.</p>
+              <div class="interest-badge">Explorer</div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="interest-box">
+              <div class="interest-icon"><i class="bx bx-movie-play"></i></div>
+              <h3>Video Editing</h3>
+              <p>Skilled in creating and editing digital content. I enjoy the creative process of bringing ideas to life through visual storytelling and digital media.</p>
+              <div class="interest-badge">Creator</div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="interest-box">
+              <div class="interest-icon"><i class="bx bx-group"></i></div>
+              <h3>Society Management</h3>
+              <p>Led multiple university societies and organizations, developing strong leadership, event management, and team coordination skills through real-world applications.</p>
+              <div class="interest-badge">Leader</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Personal Interests Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Feel free to reach out for opportunities, collaborations, or just to say hello!</p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                <h4>Location:</h4>
+                <p>Dublin, Ireland</p>
+              </div>
+
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Email:</h4>
+                <p>snehdeep459@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="icofont-github"></i>
+                <h4>GitHub:</h4>
+                <p><a href="https://github.com/snehdeep2000" target="_blank">github.com/snehdeep2000</a></p>
+              </div>
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d152422.3169123654!2d-6.376046920898426!3d53.3498052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e80ea27ac2f%3A0xa00c7a9973171a0!2sDublin%2C%20Ireland!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form w-100">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="John Doe" required>
+                  <div class="input-focus-effect"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="email">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+                  <div class="input-focus-effect"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="e.g., Job Opportunity" required>
+                <div class="input-focus-effect"></div>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" name="message" id="message" rows="10" placeholder="Your message here..." required></textarea>
+                <div class="input-focus-effect"></div>
+              </div>
+              <div class="my-3">
+                <div class="loading">Sending message...</div>
+                <div class="error-message">Sorry, your message couldn't be sent. Please try again.</div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message <i class="bx bx-send ml-1"></i></button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
 

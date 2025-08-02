@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    svg {
+      background-color: transparent;
+    }
+    .letter {
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      font-size: 70px;
+      text-anchor: middle;
+      dominant-baseline: central;
+      fill: #149ddd;
+    }
+    .background {
+      fill: #ffffff;
+      rx: 15;
+      ry: 15;
+    }
+    @media (prefers-color-scheme: dark) {
+      .letter {
+        fill: #37b3ed;
+      }
+      .background {
+        fill: #242526;
+      }
+    }
+  </style>
+  <rect class="background" x="5" y="5" width="90" height="90"/>
+  <text class="letter" x="50" y="55">SK</text>
+</svg> 
