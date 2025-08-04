@@ -115,39 +115,6 @@ section {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/*--------------------------------------------------------------
-# Theme Toggle
---------------------------------------------------------------*/
-.theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 70px;
-  z-index: 999;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--primary-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  transition: var(--transition);
-}
-
-.theme-toggle:hover {
-  background: var(--primary-hover);
-}
-
-.theme-toggle i {
-  font-size: 20px;
-}
-
-@media (max-width: 1199px) {
-  .theme-toggle {
-    right: 60px;
-  }
-}
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -307,6 +274,18 @@ section {
   color: #149ddd;
 }
 
+/* Mobile Theme Toggle in Navigation */
+.nav-menu .theme-toggle-mobile {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 10px;
+  padding-top: 20px;
+}
+
+.nav-menu .theme-toggle-mobile:hover {
+  background-color: rgba(20, 157, 221, 0.1);
+  border-radius: 8px;
+}
+
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
@@ -345,7 +324,7 @@ section {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.png") center center;
+  background: url("../img/hero-bg.jpg") center center;
   background-size: cover;
   position: relative;
   transition: var(--transition);
@@ -374,39 +353,56 @@ section {
   position: relative;
   z-index: 2;
   min-width: 300px;
-  padding: 0 30px;
+  padding: 40px 30px;
   text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 #hero h1 {
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
   font-size: 64px;
   font-weight: 700;
-  line-height: 56px;
+  line-height: 1.2;
   color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1px;
 }
 
 #hero .hero-tagline {
   color: #fff;
   font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  max-width: 80%;
+  font-weight: 500;
+  margin-bottom: 20px;
+  max-width: 90%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  line-height: 1.4;
+  opacity: 0.95;
 }
 
 #hero .typed-container {
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 400;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 #hero p {
   color: #fff;
-  margin-bottom: 50px;
-  font-size: 26px;
+  margin-bottom: 40px;
+  font-size: 24px;
   font-family: "Poppins", sans-serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  line-height: 1.4;
 }
 
 #hero p span {
@@ -414,6 +410,8 @@ section {
   padding-bottom: 4px;
   letter-spacing: 1px;
   border-bottom: 3px solid var(--primary-color);
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero-buttons {
@@ -478,20 +476,33 @@ section {
 }
 
 @media (max-width: 768px) {
+  #hero .hero-container {
+    padding: 30px 20px;
+    margin: 0 10px;
+    border-radius: 15px;
+  }
+  
   #hero h1 {
     font-size: 48px;
     line-height: 1.2;
+    margin-bottom: 15px;
   }
   
   #hero .hero-tagline {
-    font-size: 22px;
+    font-size: 20px;
     max-width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  #hero .typed-container {
+    font-size: 20px;
+    margin-bottom: 25px;
   }
   
   #hero p {
-    font-size: 22px;
-    line-height: 1.2;
-    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 25px;
   }
   
   .hero-buttons {
@@ -859,13 +870,13 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #050d18;
+  color: var(--text-color);
 }
 
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid #1f5297;
+  border-left: 2px solid var(--primary-color);
   position: relative;
 }
 
@@ -881,12 +892,13 @@ section {
 
 .resume .resume-item h5 {
   font-size: 16px;
-  background: #e4edf9;
+  background: rgba(20, 157, 221, 0.1);
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
   color: var(--primary-color);
+  border-radius: 4px;
 }
 
 .resume .resume-item ul {
@@ -909,8 +921,8 @@ section {
   border-radius: 50px;
   left: -9px;
   top: 0;
-  background: #fff;
-  border: 2px solid #1f5297;
+  background: var(--bg-color);
+  border: 2px solid var(--primary-color);
 }
 
 /*--------------------------------------------------------------
@@ -1167,6 +1179,7 @@ section {
   padding-bottom: 50px;
 }
 
+
 .contact .info {
   background: var(--card-bg);
   padding: 30px;
@@ -1243,38 +1256,67 @@ section {
   transform: translateY(-3px);
 }
 
-.contact .php-email-form {
+.contact .contact-form-wrapper {
   background: var(--card-bg);
-  padding: 30px;
-  border-radius: 15px;
+  border-radius: 20px;
   box-shadow: var(--card-shadow);
   transition: var(--transition);
+  overflow: hidden;
 }
 
-.contact .php-email-form:hover {
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+.contact .contact-form-wrapper:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
 
-.contact .php-email-form .form-row {
+.contact .form-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
+.contact .form-header h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.contact .form-header p {
+  font-size: 16px;
+  margin-bottom: 0;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.contact .contact-form {
+  padding: 35px;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.contact .contact-form .form-row {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
 }
 
-.contact .php-email-form .form-group {
+.contact .contact-form .form-group {
   position: relative;
   margin-bottom: 25px;
   padding: 0 15px;
 }
 
-.contact .php-email-form .form-group.col-md-6 {
+.contact .contact-form .form-group.col-md-6 {
   flex: 0 0 50%;
   max-width: 50%;
 }
 
-.contact .php-email-form input,
-.contact .php-email-form textarea {
+.contact .contact-form input,
+.contact .contact-form textarea {
   border-radius: 8px;
   box-shadow: none;
   font-size: 14px;
@@ -1285,40 +1327,72 @@ section {
   transition: 0.3s;
 }
 
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
+.contact .contact-form input:focus,
+.contact .contact-form textarea:focus {
   border-color: var(--primary-color);
   box-shadow: 0 0 0 3px rgba(20, 157, 221, 0.2);
 }
 
-.contact .php-email-form input {
+.contact .contact-form input {
   height: 48px;
 }
 
-.contact .php-email-form label {
+.contact .contact-form label {
   font-weight: 600;
-  margin-bottom: 8px;
-  display: block;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
   color: var(--text-color);
-  font-size: 14px;
+  font-size: 15px;
 }
 
-.contact .php-email-form button[type="submit"] {
-  background: var(--primary-color);
-  border: 0;
-  padding: 12px 32px;
+.contact .contact-form label i {
+  margin-right: 8px;
+  color: var(--primary-color);
+  font-size: 16px;
+}
+
+.contact .form-actions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.contact .btn-send {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+  border: none;
+  padding: 15px 35px;
   color: #fff;
-  transition: 0.4s;
+  transition: all 0.4s ease;
   border-radius: 50px;
   font-weight: 600;
   font-size: 16px;
-  box-shadow: 0 4px 12px rgba(20, 157, 221, 0.3);
+  box-shadow: 0 8px 25px rgba(20, 157, 221, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.contact .php-email-form button[type="submit"]:hover {
-  background: var(--primary-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(20, 157, 221, 0.4);
+.contact .btn-send:hover {
+  background: linear-gradient(135deg, var(--primary-hover), var(--primary-color));
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(20, 157, 221, 0.4);
+}
+
+.contact .btn-send:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(20, 157, 221, 0.3);
+}
+
+.contact .btn-send i {
+  transition: transform 0.3s ease;
+  font-size: 18px;
+}
+
+.contact .btn-send:hover i {
+  transform: translateX(5px);
 }
 
 .contact .error-message,
@@ -1352,11 +1426,11 @@ section {
 }
 
 /* Floating labels for contact form */
-.contact .php-email-form .form-floating {
+.contact .contact-form .form-floating {
   position: relative;
 }
 
-.contact .php-email-form .form-floating label {
+.contact .contact-form .form-floating label {
   position: absolute;
   top: 0;
   left: 0;
@@ -1368,15 +1442,15 @@ section {
   transition: opacity .1s ease-in-out, transform .1s ease-in-out;
 }
 
-.contact .php-email-form .form-floating input:focus ~ label,
-.contact .php-email-form .form-floating input:not(:placeholder-shown) ~ label,
-.contact .php-email-form .form-floating textarea:focus ~ label,
-.contact .php-email-form .form-floating textarea:not(:placeholder-shown) ~ label {
+.contact .contact-form .form-floating input:focus ~ label,
+.contact .contact-form .form-floating input:not(:placeholder-shown) ~ label,
+.contact .contact-form .form-floating textarea:focus ~ label,
+.contact .contact-form .form-floating textarea:not(:placeholder-shown) ~ label {
   opacity: .65;
   transform: scale(.85) translateY(-0.5rem) translateX(0.15rem);
 }
 
-.contact .php-email-form .loading:before {
+.contact .contact-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1563,7 +1637,7 @@ section {
   }
 }
 
-.contact .php-email-form .input-focus-effect {
+.contact .contact-form .input-focus-effect {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1573,30 +1647,30 @@ section {
   transition: width 0.3s ease-in-out;
 }
 
-.contact .php-email-form .form-control:focus + .input-focus-effect {
+.contact .contact-form .form-control:focus + .input-focus-effect {
   width: 100%;
 }
 
-.contact .php-email-form .bx-send {
+.contact .contact-form .bx-send {
   transition: transform 0.3s ease;
   display: inline-block;
   vertical-align: middle;
   margin-left: 5px;
 }
 
-.contact .php-email-form button[type="submit"]:hover .bx-send {
+.contact .contact-form button[type="submit"]:hover .bx-send {
   transform: translateX(5px);
 }
 
 /* Adjust responsive behavior for tablet and mobile */
 @media (max-width: 991px) {
-  .contact .php-email-form,
+  .contact .contact-form-wrapper,
   .contact .info {
     margin-bottom: 30px;
     height: auto;
   }
   
-  .contact .php-email-form .form-group.col-md-6 {
+  .contact .contact-form .form-group.col-md-6 {
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -1607,9 +1681,27 @@ section {
     padding: 20px;
   }
   
-  .contact .php-email-form {
-    padding: 20px;
+  .contact .form-header {
+    padding: 25px 20px;
   }
+  
+  .contact .form-header h3 {
+    font-size: 24px;
+  }
+  
+  .contact .form-header p {
+    font-size: 15px;
+  }
+  
+  .contact .contact-form {
+    padding: 25px 20px;
+  }
+  
+  .contact .btn-send {
+    padding: 12px 25px;
+    font-size: 15px;
+  }
+
 }
 
 .projects .project-card {
@@ -1694,8 +1786,8 @@ section {
   border-radius: 50px;
   left: -9px;
   top: 0;
-  background: #fff;
-  border: 2px solid #1f5297;
+  background: var(--bg-color);
+  border: 2px solid var(--primary-color);
 }
 
 /*--------------------------------------------------------------
@@ -1881,61 +1973,69 @@ section {
   background-color: var(--section-bg);
 }
 
+
 .interest-box {
   background-color: var(--card-bg);
-  border-radius: 12px;
+  border-radius: 15px;
   box-shadow: var(--card-shadow);
-  padding: 30px;
+  padding: 35px 30px;
   height: 100%;
   text-align: center;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(20, 157, 221, 0.1);
 }
 
 .interest-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(20, 157, 221, 0.15);
+  border-color: rgba(20, 157, 221, 0.3);
 }
 
 .interest-icon {
-  margin: 0 auto 20px;
-  width: 70px;
-  height: 70px;
-  background: var(--primary-color);
+  margin: 0 auto 25px;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(20, 157, 221, 0.3);
 }
 
 .interest-box:hover .interest-icon {
   background: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(20, 157, 221, 0.4);
 }
 
 .interest-icon i {
-  font-size: 36px;
+  font-size: 38px;
   color: #fff;
   transition: all 0.4s ease;
 }
 
 .interest-box:hover .interest-icon i {
   color: var(--primary-color);
+  transform: scale(1.1);
 }
 
 .interest-box h3 {
-  margin: 0 0 15px;
-  font-size: 22px;
+  margin: 0 0 20px;
+  font-size: 24px;
   font-weight: 600;
   color: var(--text-color);
 }
 
 .interest-box p {
-  font-size: 15px;
-  line-height: 1.7;
-  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 25px;
   color: var(--text-color);
+  opacity: 0.9;
 }
 
 .interest-badge {
@@ -1950,11 +2050,30 @@ section {
 }
 
 @media (max-width: 991px) {
+  .interests .row {
+    margin-bottom: 25px;
+  }
+  
   .interest-box {
-    padding: 20px;
+    padding: 25px 20px;
     margin-bottom: 30px;
   }
   
+  .interest-icon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .interest-icon i {
+    font-size: 32px;
+  }
+  
+  .interest-box h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
   .interest-icon {
     width: 60px;
     height: 60px;
@@ -1963,34 +2082,59 @@ section {
   .interest-icon i {
     font-size: 28px;
   }
+  
+  .interest-box {
+    padding: 20px 15px;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
+  .interest-icon {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .interest-icon i {
+    font-size: 24px;
+  }
+  
   .interest-box {
-    margin-bottom: 30px;
+    padding: 18px 12px;
+  }
+  
+  .interest-box h3 {
+    font-size: 20px;
   }
 }
 
 .interest-achievement {
-  background-color: rgba(20, 157, 221, 0.05);
-  border-radius: 10px;
-  padding: 15px;
-  margin: 20px 0;
+  background-color: rgba(20, 157, 221, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 25px 0;
   transition: var(--transition);
+  border: 1px solid rgba(20, 157, 221, 0.1);
 }
 
 .interest-achievement img {
-  border-radius: 8px;
-  max-height: 200px;
+  border-radius: 10px;
+  max-height: 180px;
   margin: 0 auto 15px;
   display: block;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border: 3px solid var(--primary-color);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--primary-color);
+  transition: var(--transition);
 }
 
 .interest-achievement:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(20, 157, 221, 0.15);
+  background-color: rgba(20, 157, 221, 0.12);
+}
+
+.interest-achievement:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .achievement-details h4 {

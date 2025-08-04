@@ -7,30 +7,55 @@
 !(function($) {
   "use strict";
 
-  // Theme Toggle
-  const themeToggle = document.querySelector('.theme-toggle');
-  const themeIcon = themeToggle.querySelector('i');
+  // Theme Toggle (Navbar Only)
+  const themeToggleMobile = document.querySelector('.theme-toggle-mobile');
+  const themeIconMobile = themeToggleMobile?.querySelector('i');
+  
+  // Function to update icon and text
+  function updateThemeIcon(isDark) {
+    if (themeIconMobile) {
+      const mobileText = themeToggleMobile.querySelector('span');
+      if (isDark) {
+        themeIconMobile.classList.replace('bx-moon', 'bx-sun');
+        if (mobileText) mobileText.textContent = 'Light Mode';
+      } else {
+        themeIconMobile.classList.replace('bx-sun', 'bx-moon');
+        if (mobileText) mobileText.textContent = 'Dark Mode';
+      }
+    }
+  }
   
   // Check for saved theme preference or default to light
   const currentTheme = localStorage.getItem('theme');
   if (currentTheme === 'dark') {
     document.body.classList.add('dark-theme');
-    themeIcon.classList.replace('bx-moon', 'bx-sun');
+    updateThemeIcon(true);
   }
   
-  // Toggle theme on click
-  themeToggle.addEventListener('click', function() {
+  // Function to toggle theme
+  function toggleTheme() {
     document.body.classList.toggle('dark-theme');
-    
-    // Change icon based on theme
-    if (document.body.classList.contains('dark-theme')) {
-      themeIcon.classList.replace('bx-moon', 'bx-sun');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      themeIcon.classList.replace('bx-sun', 'bx-moon');
-      localStorage.setItem('theme', 'light');
-    }
-  });
+    const isDark = document.body.classList.contains('dark-theme');
+    updateThemeIcon(isDark);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  }
+  
+  // Toggle theme on navbar click
+  if (themeToggleMobile) {
+    themeToggleMobile.addEventListener('click', function(e) {
+      e.preventDefault();
+      toggleTheme();
+      
+      // Close mobile menu after theme toggle (only on mobile screens)
+      if (window.innerWidth < 1200 && document.body.classList.contains('mobile-nav-active')) {
+        document.body.classList.remove('mobile-nav-active');
+        const mobileToggle = document.querySelector('.mobile-nav-toggle i');
+        if (mobileToggle) {
+          mobileToggle.classList.replace('icofont-close', 'icofont-navigation-menu');
+        }
+      }
+    });
+  }
   
   // Add micro-animations to interactive elements
   const addHoverAnimation = () => {
@@ -277,32 +302,23 @@
   });
 
   // Contact form animations and validation
-  const contactForm = document.querySelector('.php-email-form');
+  const contactForm = document.querySelector('.contact-form');
   if (contactForm) {
-    // Form submission
+    // Form submission with FormSubmit - no preventDefault needed, let form submit naturally
     contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
+      // Show a simple status message and update button
+      const formStatus = document.getElementById('form-status');
+      const submitBtn = contactForm.querySelector('.btn-send');
       
-      // Show loading indicator
-      const loading = contactForm.querySelector('.loading');
-      const errorMessage = contactForm.querySelector('.error-message');
-      const sentMessage = contactForm.querySelector('.sent-message');
+      if (formStatus) {
+        formStatus.innerHTML = '<p style="color: #149ddd;">Sending message...</p>';
+        formStatus.style.display = 'block';
+      }
       
-      loading.style.display = 'block';
-      
-      // Simulate form submission (replace with your actual form submission)
-      setTimeout(function() {
-        loading.style.display = 'none';
-        sentMessage.style.display = 'block';
-        
-        // Reset the form
-        contactForm.reset();
-        
-        // Hide the success message after 5 seconds
-        setTimeout(function() {
-          sentMessage.style.display = 'none';
-        }, 5000);
-      }, 1500);
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="btn-text">Sending...</span><i class="bx bx-loader-alt bx-spin"></i>';
+      }
     });
     
     // Input animations

@@ -1,37 +1,51 @@
-## Welcome to GitHub Pages
+# Snehdeep Kaur - Portfolio Website
 
-You can use the [editor on GitHub](https://github.com/Sneh960/Portfolio/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+A modern, responsive portfolio website showcasing my software development skills and professional experience.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## 🔗 Live Demo
 
-### Markdown
+**[View Portfolio](https://sneh960.github.io/Portfolio/)**
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## ✨ Features
 
-```markdown
-Syntax highlighted code block
+- Responsive design for all devices
+- Dark/light theme toggle
+- Interactive animations and typing effects
+- Dynamic project filtering
+- Contact form (FormSubmit integration)
 
-# Header 1
-## Header 2
-### Header 3
+## 🛠️ Tech Stack
 
-- Bulleted
-- List
+- **Frontend**: HTML5, CSS3, JavaScript, Bootstrap 4
+- **Libraries**: AOS, Typed.js, Isotope, jQuery
+- **Hosting**: GitHub Pages
+- **Form**: FormSubmit (no backend required)
 
-1. Numbered
-2. List
+## 🚀 Local Development
 
-**Bold** and _Italic_ and `Code` text
+```bash
+# Clone repository
+git clone https://github.com/Sneh960/Portfolio.git
+cd Portfolio
 
-[Link](url) and ![Image](src)
+# Start local server
+python -m http.server 8000
+# or
+npx serve .
+
+# Open browser
+http://localhost:8000
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## 📝 Customization
 
-### Jekyll Themes
+- **Personal Info**: Edit content in `index.html`
+- **Styling**: Update CSS variables in `assets/css/style.css`
+- **Contact Form**: Change email in FormSubmit action URL
+- **Images**: Replace files in `assets/img/`
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Sneh960/Portfolio/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## 👤 Contact
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- **Portfolio**: [sneh960.github.io/Portfolio](https://sneh960.github.io/Portfolio/)
+- **GitHub**: [@Sneh960](https://github.com/Sneh960)
+- **Email**: snehdeep459@gmail.com
